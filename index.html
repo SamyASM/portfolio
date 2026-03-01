@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Data Science & IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Asma Samy</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Mes projets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Data Scientist | Modélisation statistique & Machine Learning</h1>
+            <p class="hero-subtitle">De l’analyse et de l’interprétation de données à l’IA appliquée et la mise en production de modèles.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">À propos de moi</h2>
+        
+        <!-- NOUVEAU CONTENEUR about-content -->
+        <div class="about-content">
+            <!-- Conteneur pour le texte et les compétences -->
+            <div class="about-text">
+                <p class="about-description">
+            Data Scientist orienté IA appliquée, je développe des modèles en partant d’une compréhension claire des enjeux opérationnels.   
+
+ Ma formation (Licence et M1 Maths appliquées validés avec mention) m'a donné des connaissances solides en probabilités, Python, statistiques, apprentissage automatique et SQL. En parallèle, je développe des projets personnels en modélisation et renforce mes compétences en industrialisation (Docker, FastAPI).
+
+J'ai choisi de rejoindre le M2 M-A spécialisé en Données et Machine Learning, en alternance afin d’ancrer mon expertise technique dans des problématiques métier réelles. Ce qui me motive : concevoir des solutions impactantes. Ma force réside dans mon goût pour l'échange : j'aime échanger avec tout type d'interlocuteur (technique ou opérationnel) pour apprendre et lever les zones d'ombre, et vulgariser les concepts mathématiques et data.
+                <div class="skills-grid"> <!-- Début de la grille de compétences -->
+                    <div class="skill-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>IA et Machine Learning</h3>
+                        <p> Conception de modèles prédictifs (classification, régression), optimisation des performances et alignement des métriques avec les objectifs métier.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Rigueur statistique</h3>
+                        <p>Validation des modèles, mesure de l’incertitude et analyse critique des résultats afin de garantir des décisions fiables et mesurables.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data & Structuration</h3>
+                        <p>Création d’un site web interactif (Cinéfan) avec base de données relationnelle : modélisation du schéma, requêtes SQL avancées et structuration des données.</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Industrialisation</h3>
+                        <p>Bases en structuration de projets reproductibles et exposition de modèles via FastAPI et Docker.</p>
+                    </div>
+                    
+                </div> <!-- Fin de la grille de compétences -->
+            </div> <!-- Fin du conteneur about-text -->
+            
+            <!-- Conteneur pour l'image de profil -->
+            <div class="about-image">
+                <img src="assets/images/photo_profil.jpg" alt="Photo professionnelle" class="profile-photo">
+            </div> <!-- Fin du conteneur about-image -->
+        </div> <!-- FIN DU NOUVEAU CONTENEUR about-content -->
+        
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes projets</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <div class="filter-group">
+                    <h3>Type de projet</h3>
+                    <div class="filter-buttons" data-filter-type="category">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                        <button class="filter-btn" data-filter="web-data">Application Data</button>
+                        <button class="filter-btn" data-filter="stats">Statistiques & Inférence</button>
+                        <button class="filter-btn" data-filter="industrialisation">Industrialisation</button>
+                        
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Outils utilisés</h3>
+                    <div class="filter-buttons" data-filter-type="tools">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="python">Python</button>
+                        <button class="filter-btn" data-filter="sklearn">Scikit-learn</button>
+                        <button class="filter-btn" data-filter="sql">SQL</button>
+                        <button class="filter-btn" data-filter="api">API</button>
+                        <button class="filter-btn" data-filter="docker">Docker</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+    <div class="contact-info">
+    <div class="contact-item">
+        <a href="mailto:asma.samy@outlook.fr" class="contact-icon-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <div>
+            <h3>Email</h3>
+            <a href="mailto:asma.samy@outlook.fr">asma.samy@outlook.fr</a>
+        </div>
+    </div>
+    <div class="contact-item">
+        <a href="https://www.linkedin.com/in/samy-asma9/" target="_blank" class="contact-icon-link">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <div>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/samy-asma9/" target="_blank">
+                www.linkedin.com/in/samy-asma9
+            </a>
+        </div>
+    </div>
+    <div class="contact-item">
+        <a href="https://github.com/SamyASM" target="_blank" class="contact-icon-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <div>
+            <h3>GitHub</h3>
+            <a href="https://github.com/SamyASM" target="_blank">
+                github.com/SamyASM
+            </a>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Portfolio Asma Samy. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
