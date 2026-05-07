@@ -38,7 +38,7 @@ const projectsData = [
     {
         id: 5,
         title: "Travaux académique de Machine learning à la fois pratique et théorique ",
-        description: "Il s'agit de certains de mes projets réalisés seul ou en groupe durant ce semestre, sur le fonctionnement théorique de certains modèles(forêts aléatoires, logistique, etc) et méthodes d'évaluation (rééchantillonage, cross-validation)",
+        description: "Il s'agit de projets réalisés seul ou en groupe durant ce semestre, sur le fonctionnement théorique de certains modèles(forêts aléatoires, logistique, etc) et méthodes d'évaluation (rééchantillonage, cross-validation)",
         image: "assets/images/projet_licence.png",
         categories: ["ml", "stats"],
         tools: ["python"],
