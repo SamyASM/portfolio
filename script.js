@@ -11,6 +11,7 @@ const projectsData = [
         github: "https://github.com/SamyASM/Analyse-et-Prediction-du-Churn-Telecom-/blob/main/PROJET.ipynb",
         demo: ".pdf"
     },
+
     {
         id: 7,
         title: "Stratégie & Cas d'Usage ML",
@@ -18,10 +19,11 @@ const projectsData = [
         image: "assets/images/enjeuMetier.PNG", 
         categories: ["ml"],
         tools: ["Data Strategy"],
-        tags: [, "Use Cases", "Data Sourcing", "Enjeux métiers"],
+        tags: ["Use Cases", "Data Sourcing", "Enjeux métiers"],
         github: null,
         demo: "35 cas d'usage du machine learning dans différents secteurs et identification des sources de données.pdf"
     },
+
    {
         id: 3,
         title: "Plateforme Cinéfan",
@@ -66,7 +68,7 @@ const projectsData = [
         tags: ["NLP", "Cross-validation", "Scikit-Learn"],
         github: "https://github.com/SamyASM/Exploitation-avis-client-avec-les-Transformers-NLP-et-comparaisons-des-mod-les-pour-le-Churn./blob/main/Mod%C3%A9lisation_churn_bancaire1.ipynb",
         demo: "Churn.pdf"
-    },
+    }
     
    
 ];
