@@ -49,16 +49,26 @@ const projectsData = [
     },
     {
         id: 5,
-        title: "Résumé de certains de mes travaux en théorie du Machine learning en Master",
-        description: "Il s'agit de certains de mes projets réalisés seul ou en groupe durant ce semestre, sur le fonctionnement théorique de certains modèles",
+        title: "Travaux académique de Machine learning à la fois pratique et théorique ",
+        description: "Il s'agit de certains de mes projets réalisés seul ou en groupe durant ce semestre, sur le fonctionnement théorique de certains modèles(forêts aléatoires, logistique, etc) et méthodes d'évaluation (rééchantillonage, cross-validation)",
         image: "assets/images/projet_licence.png",
         categories: ["ml", "stats"],
         tools: ["python"],
         tags: ["Inférence statistique", "Apprentissage supervisé", "R", "Python"],
-        github: null,
-        demo: "lien.pdf"
+        github: "https://github.com/SamyASM/Travaux-de-machine-learning",
+        demo: null
     },
-    
+    {
+        id: 7,
+        title: "Stratégie & Cas d'Usage ML",
+        description: "Analyse transverse de 35 cas d'usage du Machine Learning à travers différents secteurs (Energie, Santé, Retail). Identification des leviers de valeur et des sources de données nécessaires à l'implémentation des modèles.",
+        image: "assets/images/Churn_mod.png", 
+        categories: ["ml"],
+        tools: ["Data Strategy"],
+        tags: [, "Use Cases", "Data Sourcing", "Enjeux métiers"],
+        github: null,
+        demo: "35 cas d'usage du machine learning dans différents secteurs et identification des sources de données.pdf"
+    },
 ];
 
 // DOM elements

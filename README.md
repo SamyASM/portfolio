@@ -7,7 +7,7 @@ Un site portfolio moderne et responsive pour présenter des projets en Data Scie
 - **Design moderne et responsive** : Compatible desktop et mobile
 - **Section À propos** : Présentation professionnelle avec compétences clés
 - **Portfolio de projets** : Cartes visuelles avec filtrage dynamique
-- **Filtrage avancé** : Par type de projet (IA/Data, Data Viz, Analyse, ML) et outils (Python, SQL, R, Tableau, Power BI)
+- **Filtrage avancé** : Par type de projet (IA/Data, BDD, Analyse, ML) et outils (Python, SQL, sklearn, API)
 - **Navigation fluide** : Scroll smooth et animations
 - **Liens externes** : GitHub et démos/PDF s'ouvrent dans de nouveaux onglets
 
