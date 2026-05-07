@@ -3,15 +3,25 @@ const projectsData = [
     {
         id: 1,
         title: "Analyse et prédiction du Churn (Télécom)",
-        description: "Projet complet de Data Science conduit selon la méthodologie CRISP-DM, de la compréhension métier jusqu'à la modélisation prédictive à partir dataset réel et fortement dégradé (valeurs manquantes, incohérences métier, formats hétérogènes, variables mal typées",
-        image: "assets/images/Churn.png",
+        description: "Projet complet de Data Science, de la compréhension métier jusqu'à la modélisation prédictive à partir dataset réel et fortement dégradé (valeurs manquantes, incohérences métier, formats hétérogènes, variables mal typées",
+        image: "assets/images/Churn.PNG",
         categories: ["ml"],
         tools: ["python", "sklearn"],
         tags: ["Data", "CRISP-DM", "Python", "Scikit-Learn"],
         github: "https://github.com/SamyASM/Analyse-et-Prediction-du-Churn-Telecom-/blob/main/PROJET.ipynb",
         demo: ".pdf"
     },
-
+    {
+        id: 7,
+        title: "Stratégie & Cas d'Usage ML",
+        description: "Analyse de 35 cas d'usage du Machine Learning à travers différents secteurs (Energie, Santé, Retail). Identification des leviers de valeur et des sources de données nécessaires à l'implémentation des modèles.",
+        image: "assets/images/Churn_mod.png", 
+        categories: ["ml"],
+        tools: ["Data Strategy"],
+        tags: [, "Use Cases", "Data Sourcing", "Enjeux métiers"],
+        github: null,
+        demo: "35 cas d'usage du machine learning dans différents secteurs et identification des sources de données.pdf"
+    },
    {
         id: 3,
         title: "Plateforme Cinéfan",
@@ -23,7 +33,17 @@ const projectsData = [
         github: "https://github.com/SamyASM/Base-de-donn-es-Cin-fan/tree/main/a",
         demo: "rapport.pdf"
     },
-
+    {
+        id: 5,
+        title: "Travaux académique de Machine learning à la fois pratique et théorique ",
+        description: "Il s'agit de certains de mes projets réalisés seul ou en groupe durant ce semestre, sur le fonctionnement théorique de certains modèles(forêts aléatoires, logistique, etc) et méthodes d'évaluation (rééchantillonage, cross-validation)",
+        image: "assets/images/projet_licence.png",
+        categories: ["ml", "stats"],
+        tools: ["python"],
+        tags: ["Inférence statistique", "Apprentissage supervisé", "R", "Python"],
+        github: "https://github.com/SamyASM/Travaux-de-machine-learning",
+        demo: null
+    },
     {
         id: 2,
         title: "Générateur de données CSV fictives intelligent",
@@ -47,28 +67,8 @@ const projectsData = [
         github: "https://github.com/SamyASM/Exploitation-avis-client-avec-les-Transformers-NLP-et-comparaisons-des-mod-les-pour-le-Churn./blob/main/Mod%C3%A9lisation_churn_bancaire1.ipynb",
         demo: "Churn.pdf"
     },
-    {
-        id: 5,
-        title: "Travaux académique de Machine learning à la fois pratique et théorique ",
-        description: "Il s'agit de certains de mes projets réalisés seul ou en groupe durant ce semestre, sur le fonctionnement théorique de certains modèles(forêts aléatoires, logistique, etc) et méthodes d'évaluation (rééchantillonage, cross-validation)",
-        image: "assets/images/projet_licence.png",
-        categories: ["ml", "stats"],
-        tools: ["python"],
-        tags: ["Inférence statistique", "Apprentissage supervisé", "R", "Python"],
-        github: "https://github.com/SamyASM/Travaux-de-machine-learning",
-        demo: null
-    },
-    {
-        id: 7,
-        title: "Stratégie & Cas d'Usage ML",
-        description: "Analyse transverse de 35 cas d'usage du Machine Learning à travers différents secteurs (Energie, Santé, Retail). Identification des leviers de valeur et des sources de données nécessaires à l'implémentation des modèles.",
-        image: "assets/images/Churn_mod.png", 
-        categories: ["ml"],
-        tools: ["Data Strategy"],
-        tags: [, "Use Cases", "Data Sourcing", "Enjeux métiers"],
-        github: null,
-        demo: "35 cas d'usage du machine learning dans différents secteurs et identification des sources de données.pdf"
-    },
+    
+   
 ];
 
 // DOM elements
