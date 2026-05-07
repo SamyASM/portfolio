@@ -15,7 +15,7 @@ const projectsData = [
         id: 7,
         title: "Stratégie & Cas d'Usage ML",
         description: "Analyse de 35 cas d'usage du Machine Learning à travers différents secteurs (Energie, Santé, Retail). Identification des leviers de valeur et des sources de données nécessaires à l'implémentation des modèles.",
-        image: "assets/images/Churn_mod.png", 
+        image: "assets/images/enjeuMetier.PNG", 
         categories: ["ml"],
         tools: ["Data Strategy"],
         tags: [, "Use Cases", "Data Sourcing", "Enjeux métiers"],
