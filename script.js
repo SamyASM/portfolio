@@ -9,19 +9,20 @@ const projectsData = [
         tools: ["python", "sklearn"],
         tags: ["Data", "CRISP-DM", "Python", "Scikit-Learn"],
         github: "https://github.com/SamyASM/Analyse-et-Prediction-du-Churn-Telecom-/blob/main/PROJET.ipynb",
-        demo : "Churn_Prediction_Presentation.pdf"
+        demo : "Churn_Prediction_Presentation.pdf" // Rétrocompatible : sera traité comme un bouton PDF
     },
 
     {
         id: 2,
         title: "Assistant IA Datack pour l'Actuariat",
-        description: "Conception et développement en 36 heures d'un assistant IA basé sur une approche RAG (Retrieval-Augmented Generation) sur plus de 150 mémoires d'actuariat[cite: 3, 5]. La solution intègre un découpage sémantique, une recherche hybride (Vectorielle + BM25), un requêtage adaptatif (Top-K) et un routage intelligent afin de maximiser la précision des réponses tout en optimisant le coût financier et l'empreinte carbone[cite: 18, 66, 87, 119].",
+        description: "Conception et développement en 36 heures d'un assistant IA basé sur une approche RAG (Retrieval-Augmented Generation) sur plus de 150 mémoires d'actuariat. La solution intègre un découpage sémantique, une recherche hybride (Vectorielle + BM25), un requêtage adaptatif (Top-K) et un routage intelligent afin de maximiser la précision des réponses tout en optimisant le coût financier et l'empreinte carbone.",
         image: "assets/images/assistant.jpg",
         categories: ["ml"],
         tools: ["python", "api"],
         tags: ["RAG", "LLM", "ChromaDB", "Actuariat", "Python"],
-        github: "https://huggingface.co/spaces/Datack/My_App_Datack",
-        demo: "Presentation_Datack.pdf"
+        github: null, // Plus de bouton Github/Code erroné
+        demo: "https://huggingface.co/spaces/Datack/My_App_Datack", // Vrai lien de démo
+        pdf: "Presentation_Datack.pdf" // Clé dédiée pour ton PDF
     },
 
     {
@@ -81,8 +82,6 @@ const projectsData = [
         github: "https://github.com/SamyASM/Exploitation-avis-client-avec-les-Transformers-NLP-et-comparaisons-des-mod-les-pour-le-Churn./blob/main/Mod%C3%A9lisation_churn_bancaire1.ipynb",
         demo: "Churn.pdf"
     }
-    
-   
 ];
 
 // DOM elements
@@ -110,29 +109,27 @@ function renderProjects(projects) {
 }
 
 
-// Remplacez l'ancienne fonction par celle-ci
+// FONCTION CORRIGÉE POUR RECONNAITRE LES 3 BOUTONS DISTINCTEMENT
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
     card.setAttribute('data-categories', project.categories.join(' '));
     card.setAttribute('data-tools', project.tools.join(' '));
     
-    // --- NOUVELLE LOGIQUE DE LIENS AMÉLIORÉE ---
-    
-    let codeLinkHtml = ''; // Variable pour le lien Code/Tableau
-    let demoLinkHtml = ''; // Variable pour le lien Démo/PDF
+    // Initialisation des boutons vides
+    let codeLinkHtml = ''; 
+    let demoLinkHtml = ''; 
+    let pdfLinkHtml = '';  
 
-    // 1. Génère le bouton "Code" SEULEMENT SI project.github existe
+    // 1. Bouton Code (GitHub)
     if (project.github) { 
         if (project.id === 6) {
-            // Cas spécial Tableau (ID 4)
             codeLinkHtml = `
                 <a href="${project.github}" class="project-link tableau" target="_blank">
                     <i class="fas fa-chart-simple"></i> Tableau
                 </a>
             `;
         } else {
-            // Cas GitHub par défaut
             codeLinkHtml = `
                 <a href="${project.github}" class="project-link github" target="_blank">
                     <i class="fab fa-github"></i> Code
@@ -141,17 +138,17 @@ function createProjectCard(project) {
         }
     }
 
-    // 2. Génère le bouton "Démo" SEULEMENT SI project.demo existe
+    // 2. Bouton Démo Live (Hugging Face, Sites...)
     if (project.demo) {
         if (project.demo.includes('.pdf')) {
-            // Cas PDF
-            demoLinkHtml = `
+            // Rétrocompatibilité : si un ancien projet utilise .pdf dans demo, on l'affiche en bouton PDF
+            pdfLinkHtml = `
                 <a href="${project.demo}" class="project-link demo" target="_blank">
                     <i class="fas fa-file-pdf"></i> Voir PDF
                 </a>
             `;
         } else {
-            // Cas Démo Live
+            // Vrai lien de démo
             demoLinkHtml = `
                 <a href="${project.demo}" class="project-link demo" target="_blank">
                     <i class="fas fa-external-link-alt"></i> Démo live
@@ -159,10 +156,17 @@ function createProjectCard(project) {
             `;
         }
     }
+
+    // 3. Bouton PDF dédié (Pour ton projet Datack ID 2)
+    if (project.pdf) {
+        pdfLinkHtml = `
+            <a href="${project.pdf}" class="project-link demo" target="_blank">
+                <i class="fas fa-file-pdf"></i> Voir PDF
+            </a>
+        `;
+    }
     
-    // --- FIN DE LA NOUVELLE LOGIQUE ---
-    
-    // On assemble la carte
+    // Assemblage final de la carte
     card.innerHTML = `
         <div class="project-image" style="background-image: url('${project.image}')"></div>
         <div class="project-content">
@@ -172,7 +176,8 @@ function createProjectCard(project) {
                 ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
             </div>
             <div class="project-links">
-                ${codeLinkHtml} ${demoLinkHtml} </div>
+                ${codeLinkHtml} ${demoLinkHtml} ${pdfLinkHtml} 
+            </div>
         </div>
     `;
     
@@ -181,17 +186,14 @@ function createProjectCard(project) {
 
 // Setup event listeners
 function setupEventListeners() {
-    // Filter functionality
     filterButtons.forEach(button => {
         button.addEventListener('click', handleFilterClick);
     });
     
-    // Mobile menu toggle
     if (hamburger) {
         hamburger.addEventListener('click', toggleMobileMenu);
     }
     
-    // Close mobile menu when clicking on nav links
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
@@ -203,12 +205,10 @@ function handleFilterClick(e) {
     const filterType = button.parentElement.getAttribute('data-filter-type');
     const filterValue = button.getAttribute('data-filter');
     
-    // Update active state for buttons in the same group
     const groupButtons = button.parentElement.querySelectorAll('.filter-btn');
     groupButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
     
-    // Apply filters
     applyFilters();
 }
 
@@ -239,7 +239,6 @@ function toggleMobileMenu() {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
     
-    // Animate hamburger bars
     const bars = hamburger.querySelectorAll('.bar');
     if (hamburger.classList.contains('active')) {
         bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
@@ -272,7 +271,7 @@ function setupSmoothScrolling() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                const offsetTop = target.offsetTop - 80;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
