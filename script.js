@@ -9,19 +9,19 @@ const projectsData = [
         tools: ["python", "sklearn"],
         tags: ["Data", "CRISP-DM", "Python", "Scikit-Learn"],
         github: "https://github.com/SamyASM/Analyse-et-Prediction-du-Churn-Telecom-/blob/main/PROJET.ipynb",
-        présentation: "Churn_Prediction_Presentation.pdf"
+        demo : "Churn_Prediction_Presentation.pdf"
     },
 
     {
         id: 2,
         title: "Assistant IA Datack pour l'Actuariat",
         description: "Conception et développement en 36 heures d'un assistant IA basé sur une approche RAG (Retrieval-Augmented Generation) sur plus de 150 mémoires d'actuariat[cite: 3, 5]. La solution intègre un découpage sémantique, une recherche hybride (Vectorielle + BM25), un requêtage adaptatif (Top-K) et un routage intelligent afin de maximiser la précision des réponses tout en optimisant le coût financier et l'empreinte carbone[cite: 18, 66, 87, 119].",
-        image: "/assets/images/assistant.jpg",
+        image: "assets/images/assistant.jpg",
         categories: ["ml"],
         tools: ["python", "api"],
         tags: ["RAG", "LLM", "ChromaDB", "Actuariat", "Python"],
-        demo: "https://huggingface.co/spaces/Datack/My_App_Datack",
-        pdf: "Presentation_Datack.pdf"
+        github: "https://huggingface.co/spaces/Datack/My_App_Datack",
+        demo: "Presentation_Datack.pdf"
     },
 
     {
