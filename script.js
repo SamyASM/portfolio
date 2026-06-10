@@ -9,7 +9,19 @@ const projectsData = [
         tools: ["python", "sklearn"],
         tags: ["Data", "CRISP-DM", "Python", "Scikit-Learn"],
         github: "https://github.com/SamyASM/Analyse-et-Prediction-du-Churn-Telecom-/blob/main/PROJET.ipynb",
-        demo: ".pdf"
+        présentation: "Churn_Prediction_Presentation.pdf"
+    },
+
+    {
+        id: 2,
+        title: "Assistant IA Datack pour l'Actuariat",
+        description: "Conception et développement en 36 heures d'un assistant IA basé sur une approche RAG (Retrieval-Augmented Generation) sur plus de 150 mémoires d'actuariat[cite: 3, 5]. La solution intègre un découpage sémantique, une recherche hybride (Vectorielle + BM25), un requêtage adaptatif (Top-K) et un routage intelligent afin de maximiser la précision des réponses tout en optimisant le coût financier et l'empreinte carbone[cite: 18, 66, 87, 119].",
+        image: "/assets/images/assistant.jpg",
+        categories: ["ml"],
+        tools: ["python", "api"],
+        tags: ["RAG", "LLM", "ChromaDB", "Actuariat", "Python"],
+        demo: "https://huggingface.co/spaces/Datack/My_App_Datack",
+        pdf: "Presentation_Datack.pdf"
     },
 
     {
@@ -47,7 +59,7 @@ const projectsData = [
         demo: null
     },
     {
-        id: 2,
+        id: 10,
         title: "Générateur de données CSV fictives intelligent",
         description: "Création avec un ami d'un générateur de données fictives et aléatoires cohérentes, idéal pour s'entraîner sur des projets DATA en condition réelle. <a href='https://claude.ai/public/artifacts/5c5cd93c-e664-478f-ae39-d9cb574a8acf' target='_blank'>Lien de la version intelligente/IA ici</a>",
         image: "assets/images/Generateur_csv2_reoptimized.jpeg",
