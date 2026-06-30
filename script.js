@@ -9,7 +9,7 @@ const projectsData = [
         tools: ["python", "sklearn"],
         tags: ["Data", "CRISP-DM", "Python", "Scikit-Learn"],
         github: "https://github.com/SamyASM/Analyse-et-Prediction-du-Churn-Telecom-/blob/main/README.md",
-        demo : "Churn_Prediction_Presentation.pdf" // Rétrocompatible : sera traité comme un bouton PDF
+        demo : "Churn_Prediction_Presentation_.pdf" // Rétrocompatible : sera traité comme un bouton PDF
     },
 
     {
